@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "form",
   "version": "1.0.0",
   "main": "index.ts",
@@ -24,4 +25,21 @@
     "typescript": "^5.3.3"
   },
   "private": true
+=======
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  }
+>>>>>>> 526138956bc4522737fed2ed53c1ca9ba001fb1d
 }
