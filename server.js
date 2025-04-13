@@ -1,16 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require("dotenv").config(); // Loads variables from .env
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Atlas connection
-mongoose.connect("mongodb+srv://smitmpatel0603:Patel0610@cluster0.g5qbdum.mongodb.net/formApp?retryWrites=true&w=majority&appName=Cluster0")
+// MongoDB Atlas connection using environment variable
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log("✅ MongoDB Atlas connected"))
   .catch((err) => console.error("❌ Connection error:", err));
 
